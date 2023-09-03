@@ -1,0 +1,338 @@
+
+
+.login-container {
+    padding: 100px;
+}
+
+.user-picture>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.user-picture {
+    width: 100px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.camera-icon {
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.chat-container {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 50px !important;
+}
+
+.message-box {
+    width: 45%;
+    background-color: #c7e3f9;
+    padding: 10px;
+    color: #667682;
+    border-radius: 5px;
+}
+
+.message-box > span {
+ 
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.right-message {
+    background-color: #6daad7;
+    color: #141414;
+    margin-left: auto;
+}
+
+.chat-box {
+    padding: 10px;
+    height: 400px;
+    overflow: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction:column-reverse;
+
+    background: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}
+
+
+.user-profile{
+
+    width: 50px;
+    height: 50px;
+}
+
+.chat-icon{
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.chat-icon :active{
+
+    opacity: 0.5;
+}
+
+.user-profile-chat{
+
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+
+
+}
+
+.list-group-item{
+
+    cursor: pointer;
+
+    background: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+
+.list-group-item :hover {
+
+    background: #780206;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+
+    
+}
+
+.online-dot{
+
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    
+}
+
+.green-dot{
+
+    background-color: green;
+}
+
+.red-dot{
+
+    background-color: red;
+}
+
+.user-container{
+
+    position: relative;
+}
+
+.users-list{
+
+    height: 453px;
+    overflow-y: scroll;
+    background: #b92b27;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.notification-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.selectedUserCard{
+
+    background: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.logged-in-user{
+
+    background: #FBD3E9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+/* ============================================================================== */
+
+.nav-div{
+    background-color: #7c2bda ;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+.nav-div1 {
+    
+    
+    margin-left: 10%;
+    width: 20% !important;
+}
+
+.nav-div1 > a{
+    color: white;
+    font-weight: bold;
+    
+    
+}
+
+.nav-div2 > a , button {
+    color: white;
+    font-weight: bold;
+    margin-left: 30%;
+    width: 30%;
+}
+
+.Dashboard{
+
+    width: 16%;
+    margin-left: 10%;
+    font-weight: bold;
+    margin-top: 19px;
+}
+
+.text-div{
+
+    width: 65%;
+    margin-left: 10%;
+    margin-top: 50px;
+
+}
+
+.text-div{
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.text-div{
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/*================ spiner======== */
+.my-spin{
+
+    position: absolute;
+    left: 48%;
+    bottom: -27%;
+}
+
+
+.sign-out{
+
+    border-radius: 28px;
+    width: 100px !important;
+}
+
+/* user picture in my blog where user is showing */
+.my-blog-pic{
+    width: 5%;
+}
+
+
+/* edit blog modal */
+.edit-text-div{
+    width: 60%;
+    margin: 0 auto;
+    position: fixed;
+    top: 150px;
+    left: 17%;
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: none;
+    background-color: whitesmoke;
+}
+
+.edit-text-div{
+    
+}
+
+/* cancel btn in edit blog modal */
+
+.cancel-btn{
+    background-color:crimson !important;
+}
+
+
+/* dashboard.html nav links */
+
+.dashboard-navlinks{
+    color: white !important;
+    font-weight: bold;
+}
+
+.dashboard-navlinks:hover{
+    color: black !important;
+}
+
+
+/* card body for background color change */
+.authentication-card{
+
+    background: #000046;  
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.authentication-card{
+
+    color: white !important;
+}
+
+.register-now-link{
+    color: cyan;
+}
+
+
+ /*=============== Dashboard.html heading 2 =============== */
+.write{
+    width: 50%;
+    margin-left: 10%;
+}
+
+/* ============= profile card in index.html where user information showing ============ */
+.profile-card{
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.profile-card{
+
+    background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+ background-blend-mode: normal,color-burn;
+}
