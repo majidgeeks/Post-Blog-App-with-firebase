@@ -32,158 +32,6 @@
     cursor: pointer;
 }
 
-.chat-container {
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-top: 50px !important;
-}
-
-.message-box {
-    width: 45%;
-    background-color: #c7e3f9;
-    padding: 10px;
-    color: #667682;
-    border-radius: 5px;
-}
-
-.message-box > span {
- 
-    font-size: 12px;
-    font-weight: bold;
-
-}
-
-.right-message {
-    background-color: #6daad7;
-    color: #141414;
-    margin-left: auto;
-}
-
-.chat-box {
-    padding: 10px;
-    height: 400px;
-    overflow: auto;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction:column-reverse;
-
-    background: #FBD3E9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-
-}
-
-
-.user-profile{
-
-    width: 50px;
-    height: 50px;
-}
-
-.chat-icon{
-
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.chat-icon :active{
-
-    opacity: 0.5;
-}
-
-.user-profile-chat{
-
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-
-
-}
-
-.list-group-item{
-
-    cursor: pointer;
-
-    background: #FBD3E9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
-
-
-.list-group-item :hover {
-
-    background: #780206;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  color: white;
-
-    
-}
-
-.online-dot{
-
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    position: absolute;
-    right: 10px;
-    top: 20px;
-    
-}
-
-.green-dot{
-
-    background-color: green;
-}
-
-.red-dot{
-
-    background-color: red;
-}
-
-.user-container{
-
-    position: relative;
-}
-
-.users-list{
-
-    height: 453px;
-    overflow-y: scroll;
-    background: #b92b27;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.notification-badge {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-}
-
-.selectedUserCard{
-
-    background: #FBD3E9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
-
-.logged-in-user{
-
-    background: #FBD3E9;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-}
-
-
 /* ============================================================================== */
 
 .nav-div{
@@ -215,12 +63,58 @@ background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, F
     width: 30%;
 }
 
+.navDiv-inner > a{
+    color: white;
+
+}
+
+
+/* sign out button in new navbar */
+.sign-out-btn{
+
+cursor: pointer;
+}
+
+.sign-out-btn:hover{
+    background-color:crimson
+}
+
+
+
+/* new navbar main div */
+.new-nav{
+    justify-content: space-evenly !important;
+    background-color: #7c2bda ;
+    color: white !important;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    
+}
+
+.nav-text{
+    color: white !important;
+    font-weight: bold;
+
+}
+
+.nav-text:hover{
+    background-color: black;
+    
+}
+
+
 .Dashboard{
 
     width: 16%;
     margin-left: 10%;
     font-weight: bold;
-    margin-top: 19px;
+    margin-top: 70px;
+}
+
+.my-blogs{
+    margin-top: 30px;
 }
 
 .text-div{
@@ -228,6 +122,7 @@ background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, F
     width: 65%;
     margin-left: 10%;
     margin-top: 50px;
+
 
 }
 
@@ -336,3 +231,91 @@ background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, F
     background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
  background-blend-mode: normal,color-burn;
 }
+
+
+/* responsive */
+
+/* Default styles for larger screens */
+.login-container {
+    padding: 100px;
+}
+
+/* css for index.html */
+.update-profile-btn{
+    width: 100%;
+}
+
+.logOut-profile-btn{
+    width: 100%;
+
+}
+
+/* ... Other styles ... */
+
+/* Media query for medium-sized screens */
+@media (max-width: 768px) {
+    .nav-div1 {
+        margin-left: 5%;
+        width: 40% !important;
+    }
+
+    .nav-div2 > a, button {
+        margin-left: 10%;
+        width: 40%;
+    }
+
+    .text-div {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 50px;
+    }
+
+    .update-profile-btn{
+        width: 100%;
+    }
+
+    .logOut-profile-btn{
+        width: 100%;
+    
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 50px;
+    }
+
+    .nav-div1 {
+        margin-left: 2%;
+        width: 60% !important;
+    }
+
+    .nav-div2 > a, button {
+        margin-left: 5%;
+        width: 50%;
+    }
+
+    .text-div {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .write {
+        width: 80%;
+        margin-left: 5%;
+    }
+
+    .update-profile-btn{
+        width: 100%;
+    }
+
+    .logOut-profile-btn{
+        width: 100%;
+    
+    }
+    
+}
+
+

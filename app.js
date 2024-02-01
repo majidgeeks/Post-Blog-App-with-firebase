@@ -1,9 +1,10 @@
 
-import {auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, doc, setDoc, db, getDoc, updateDoc, storage, ref, uploadBytesResumable, getDownloadURL, reauthenticateWithCredential, EmailAuthProvider, updatePassword, collection, addDoc, serverTimestamp, query, where, getDocs, deleteDoc} from "./firebase.js";
+import {auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, doc, setDoc, db, getDoc, updateDoc, storage, ref, uploadBytesResumable, getDownloadURL, reauthenticateWithCredential, EmailAuthProvider, updatePassword, collection, addDoc, serverTimestamp, query, where, getDocs, deleteDoc} from "./firebase-config.js";
 
 
 let flag = true;
 let profilePic = document.getElementById("user-profile");
+let spinner = document.getElementById("spinner")
 
 const getCurrentUserData = async (uid) => {
   
@@ -19,9 +20,12 @@ console.log("uid in get current user data", uid)
 
 const docSnap = await getDoc(docRef);
 
+
 if (docSnap.exists()) {
     if(location.pathname === "/dashboard.html" || location.pathname === "/blogs.html" ){
         userName.innerHTML = docSnap.data().name;
+        
+        
         
         
     }
@@ -32,7 +36,9 @@ if (docSnap.exists()) {
         userUid.value = docSnap.id;
         profilePic.src = docSnap.data().profilePic;
         console.log("Document get current user data:", docSnap.data());
-        spinner.style.display = "none"
+          spinner.style.display = "none"
+
+        
     }
 } else {
   // docSnap.data() will be undefined in this case
@@ -117,8 +123,8 @@ querySnapshot.forEach((doc) => {
           </div>
           <div class="card-body">
           <p class="card-text"> ${doc.data().description}</p>
-          <a href="javascript:void(0)" class="card-link seeAll" onclick="deleteBlog('${doc.id}')">Delete</a>
-          <a href="javascript:void(0)" class="card-link seeAll" onclick="editBlog('${doc.id}', '${doc.data().title}', '${doc.data().description}')">Edit</a>
+          <a href="javascript:void(0)" class="card-link btn btn-danger seeAll" onclick="deleteBlog('${doc.id}')">Delete</a>
+          <a href="javascript:void(0)" class="card-link btn btn-warning seeAll" onclick="editBlog('${doc.id}', '${doc.data().title}', '${doc.data().description}')">Edit</a>
           </div>
           </div>
           </div>
@@ -159,7 +165,7 @@ onAuthStateChanged(auth, (user) => {
   });
 
 let signUpBtn = document.getElementById("register-btn");
-let spinner = document.getElementById("spinner")
+
 spinner.style.display = "none"
 
 let register = () => {
@@ -199,8 +205,8 @@ await setDoc(doc(db, "user", user.uid), {
     console.log("error", error.message)
     Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
+        title: error,
+        text: errorMessage,
         footer: '<a href="">Why do I have this issue?</a>'
       })
   });
@@ -226,7 +232,7 @@ let signIn = () => {
     console.log("user signed in",user)
     Swal.fire({
         position: 'top-end',
-        icon: 'success',
+        icon: 'Signed in successfully',
         title: 'Your work has been saved',
         showConfirmButton: false,
         timer: 1500
@@ -240,7 +246,7 @@ let signIn = () => {
     console.log("error", error.message)
     Swal.fire({
         icon: 'error',
-        title: 'Oops...',
+        title: errorMessage,
         text: 'Something went wrong!',
         footer: '<a href="">Why do I have this issue?</a>'
       })
@@ -325,7 +331,7 @@ const updateUserPassword = (oldPass, newPass) =>{
         spinner.style.display = "none";
     Swal.fire({
         position: 'top-end',
-        icon: 'success',
+        icon: 'password updated succesfully',
         title: 'profile updated',
         showConfirmButton: false,
         timer: 1500
@@ -335,7 +341,7 @@ const updateUserPassword = (oldPass, newPass) =>{
         spinner.style.display = "none"
         
         Swal.fire({
-            icon: 'error',
+            icon: error,
             title: 'Oops...',
             text: 'Something went wrong!',
             footer: '<a href="">Why do I have this issue?</a>'
@@ -397,7 +403,7 @@ await updateDoc(userRef, user );
 spinner.style.display = "none";
 Swal.fire({
     position: 'top-end',
-    icon: 'success',
+    icon: 'successfully',
     title: 'profile updated',
     showConfirmButton: false,
     timer: 1500
@@ -407,9 +413,9 @@ Swal.fire({
   spinner.style.display = "none"
     console.log("error", error.message)
     Swal.fire({
-        icon: 'error',
+        icon: error,
         title: 'Oops...',
-        text: 'Something went wrong!',
+        text: error.message,
         footer: '<a href="">Why do I have this issue?</a>'
       })
  

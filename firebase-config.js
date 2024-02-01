@@ -6,13 +6,13 @@ import {getStorage, ref, uploadBytesResumable, getDownloadURL} from "https://www
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBAeTPf9GDOKc81v6avBMykYElJp2zBvgk",
-    authDomain: "data-base-151c7.firebaseapp.com",
-    projectId: "data-base-151c7",
-    storageBucket: "data-base-151c7.appspot.com",
-    messagingSenderId: "637878582535",
-    appId: "1:637878582535:web:8fe1b4e35b5444172cd9a2",
-    measurementId: "G-7JBPL4E9J1"
+  apiKey: "AIzaSyBAeTPf9GDOKc81v6avBMykYElJp2zBvgk",
+  authDomain: "data-base-151c7.firebaseapp.com",
+  projectId: "data-base-151c7",
+  storageBucket: "data-base-151c7.appspot.com",
+  messagingSenderId: "637878582535",
+  appId: "1:637878582535:web:8fe1b4e35b5444172cd9a2",
+  measurementId: "G-7JBPL4E9J1"
   };
 
   // Initialize Firebase
